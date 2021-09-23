@@ -11,11 +11,11 @@ management:
       enabled: true
     shutdown:
       enabled: true
- eureka:
+eureka:
   client:
     service-url:
       default-zone: http://localhost:8761/eureka
- spring:
+spring:
   cloud:
     gateway:
       routes:
