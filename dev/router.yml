@@ -1,0 +1,23 @@
+server:
+  port: 8765
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+      base-path: /manage
+  endpoint:
+    restart:
+      enabled: true
+    shutdown:
+      enabled: true
+ eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+ spring:
+  cloud:
+    gateway:
+      routes:
+        - id: limits-service
+          uri: http://limits-service
