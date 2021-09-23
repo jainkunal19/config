@@ -18,8 +18,11 @@ eureka:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: limits-service
-          uri: http://limits-service
+          uri: lb://limits-service
           predicates:
-          - Path=/**
+          - Path=/currency-converter/**
