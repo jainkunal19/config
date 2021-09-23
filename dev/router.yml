@@ -22,4 +22,4 @@ spring:
         - id: limits-service
           uri: http://limits-service
           predicates:
-          - Path=/currency-converter/**
+          - Path=/**
