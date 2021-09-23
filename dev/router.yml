@@ -21,8 +21,8 @@ spring:
       discovery:
         locator:
           enabled: true
-      routes:
-        - id: limits-service
-          uri: lb://limits-service
-          predicates:
-          - Path=/currency-converter/**
+ #     routes:
+ #       - id: limits-service
+  #        uri: lb://limits-service
+  #        predicates:
+   #       - Path=/currency-converter/**
