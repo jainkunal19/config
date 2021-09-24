@@ -23,10 +23,10 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-        - id: default
-          uri: "*"
+        - id: limitservice
+          uri: lb://limits-service
           predicates:
-          - Path=/**
+          - Path=/limitservice/**
           filters:
           -name: CircuitBreaker
           args:
