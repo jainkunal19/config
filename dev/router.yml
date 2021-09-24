@@ -24,7 +24,7 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: limitservice
-          uri: lb://limits-service
+          uri: lb://LIMITS-SERVICE
           predicates:
           - Path=/limitservice/**
           filters:
