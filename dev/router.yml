@@ -24,11 +24,6 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: limitservice
-          uri: lb://LIMITS-SERVICE
+          uri: lb://limits-service/currency-converter
           predicates:
-          - Path=/limitservice/**
-          filters:
-          -name: CircuitBreaker
-          args:
-            name: CircuitBreakerFallback
-            fallbackUri: forward:/fallback
+          - Path=/currency-converter/**
