@@ -27,3 +27,8 @@ spring:
           uri: lb://limits-service/currency-converter
           predicates:
           - Path=/currency-converter/**
+      default-filters:
+        - name: CircuitBreaker
+          args:
+            name: myCircuitBreaker
+            fallbackUri: forward:/fallback
